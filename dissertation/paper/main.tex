@@ -1,0 +1,156 @@
+\documentclass[12pt,a4paper]{book}
+
+\usepackage{appendix}
+\usepackage{chngcntr}
+\usepackage{etoolbox}
+
+\AtBeginEnvironment{subappendices}{%
+\chapter*{Appendix}
+\addcontentsline{toc}{chapter}{Appendices}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+}
+
+\renewcommand{\d}{\mathrm{d}}
+\usepackage[longnamesfirst]{natbib}
+\usepackage{subcaption} % subfigure         
+\usepackage{rotating}   % sidewaystable
+\usepackage{pgfplots}
+\usepackage{adjustbox}
+
+%\newcommand*{\ResultsPath}{../../inequality-mortgages/results}
+
+
+% \input{../../header-files/src/header}
+% \input{../../header-files/src/falling-behind}
+% \input{../../header-files/src/acronyms}
+% \input{../../header-files/src/math-def}
+% \input{../../header-files/src/hypersetup}
+
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+% \counterwithout{figure}{chapter}
+
+\usepackage{mathtools}
+\mathtoolsset{showonlyrefs=true}
+
+% \newcommand{\dgg}{Chapter~\ref{chp:falling-behind}}
+% \newcommand{\dggi}{\dgg}
+
+% \newcommand{\grza}{Chapter~\ref{chp:understanding}}
+% \newcommand{\grzai}{\grza}
+
+
+\begin{document}
+
+% Title page
+\begin{titlepage}
+\centering
+
+\vspace*{5cm}
+
+{\bfseries \Huge Essays on the Macroeconomics \\ \bigskip  of Housing Markets}
+
+\vfill
+%\vspace{3cm}
+
+Inauguraldissertation \\
+zur Erlangung des akademischen Grades \\
+eines Doktors der Wirtschaftswissenschaften \\
+der Universität Mannheim
+
+\vfill
+
+vorgelegt von \\ \vspace{10pt}% \medskip
+
+{\Large Fabian Greimel} \\ \vspace{10pt}%medskip
+
+im Frühjahrs-/Sommersemester 2020
+
+\end{titlepage}
+
+\thispagestyle{empty}
+
+  \vspace*{18cm}
+  
+\begin{tabular}{ll}
+  Abteilungssprecher & Prof. Volker Nocke, PhD \\
+  Referent & Prof. Michèle Tertilt, PhD \\
+  Koreferent & Prof. Klaus Adam, PhD \\
+  \\
+  Tag der Verteidigung & 19. August 2020
+\end{tabular}
+
+
+\input{acknowledgements}
+
+\setcounter{tocdepth}{1}
+
+\tableofcontents
+
+%\listoffigures
+
+%\listoftables
+
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+
+\input{introduction}
+
+\chapter[Falling Behind]{Falling Behind: \\ Has Rising Inequality Fueled \\ the American Debt Boom?}
+\label{chp:falling-behind}
+
+Joint with Moritz Drechsel-Grau.
+
+%\input{chapter-one}
+
+\begin{subappendices}
+%  \input{chapter-one-appendices}
+\end{subappendices}
+
+\chapter[Top Incomes and Mortgage Debt]{Top Incomes \\ and Mortgage Debt \\ Across the United States}
+
+Joint with Moritz Drechsel-Grau.
+
+%\input{../../inequality-mortgages/paper/body}
+
+%\begin{subappendices}
+%  \input{../../inequality-mortgages/paper/appendices}
+%\end{subappendices}
+
+\chapter[Understanding Housing Wealth Effects]{Understanding \\ Housing Wealth Effects: \\ Debt, Home-Ownership \\ and the Lifecycle}
+\label{chp:understanding}
+
+Joint with Frederick Zadow.
+
+%\input{../../housing-wealth-effects/paper-old/body}
+
+\begin{subappendices}
+%  \input{../../housing-wealth-effects/paper-old/appendices}
+\end{subappendices}
+
+
+%\bibliography{../../falling-behind/MDG_Bib,../../header-files/bib/shame}
+\bibliographystyle{ecta}
+
+\chapter*{Curriculum vit\ae{}}
+
+\begin{tabular}{ll}
+  2015--2020 & University of Mannheim (Germany) \\
+             & \emph{PhD in Economics} \\
+  2016--2017 & Yale University, New Haven (Connecticut, USA) \\
+             & \emph{Visiting PhD Student} \\
+  2013--2015 & Institute for Advanced Studies, Vienna (Austria) \\
+             & \emph{MSc in Economics} \\
+  2010--2013 & University of Economics and Business, Vienna (Austria) \\
+             & \emph{BSc in Economics}
+\end{tabular}
+
+
+\end{document}
+
+
+%%% Local Variables:
+%%% TeX-engine: luatex
+%%% TeX-master: t
+%%% End:

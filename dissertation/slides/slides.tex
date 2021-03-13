@@ -1,0 +1,192 @@
+\documentclass[aspectratio=169,mathserif,xcolor=dvipsnames]{beamer}
+ 
+\useoutertheme[numbering=fraction]{metropolis}
+\useinnertheme{metropolis}
+\usefonttheme{metropolis}
+\usecolortheme{default}
+
+\usepackage{array}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage[longnamesfirst]{natbib}
+\usepackage{minibox}
+\usepackage{tabularx}
+
+\input{../../header-files/src/metropolis-titlepage}
+\input{../../header-files/src/header.tex}
+\input{../../header-files/src/acronyms.tex}
+\input{../../header-files/src/math-def.tex}
+\input{../../header-files/src/tikz-def.tex}
+\input{../../header-files/src/beamer-header.tex}
+\input{../../header-files/src/falling-behind.tex}
+
+\usepackage{pgfplots}
+\usetikzlibrary{tikzmark, positioning}
+
+\definecolor{LRed}{rgb}{1,.8,.8}
+% alert color
+% \renewcommand{\alert}[1]{{\usebeamercolor[fg]{frametitle}{#1}}}
+
+% customize color commands
+% \newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\maroon}[1]{\textcolor{Maroon}{#1}}
+% \newcommand{\blue}[1]{\textcolor{blue}{#1}}
+% \newcommand{\green}[1]{\textcolor{green}{#1}}
+%\newcommand{\gray}[1]{\textcolor{gray}{#1}}
+
+%\newcommand{\eps}{\varepsilon}
+
+\AtBeginSection[]
+{
+  \frame{\sectionpage}
+  % \begin{frame}
+  %   \frametitle{Outline}
+  %   \tableofcontents[currentsubsection]
+  % \end{frame}
+}
+
+%\usepackage[longnamesfirst]{natbib}
+
+% \usepackage[ngerman]{babel}
+%\usepackage[applemac]{inputenc}
+
+%\renewcommand{\caption}[1]{}
+
+%\title{The Distribution of Household Debt and Financial Fragility}
+\title{Essays on the Macroeconomics of Housing Markets}
+
+
+\author{Fabian Greimel}
+\institute[U Mannheim]{\vspace{-10pt} University of Mannheim}
+\date{\vspace{10pt} Dissertation Defense $|$ Mannheim  $|$ August 19, 2020}
+
+
+\begin{document}
+ 
+ \frame[plain]{\maketitle}
+
+
+ \begin{frame}{Outline}
+
+   \begin{description}
+   \item[Chapter 1] Falling Behind: Has Rising Inequality \\ Fueled the American Debt Boom?
+   \item[Chapter 2] Top Incomes And Mortgage Debt Across the United States
+   \item[Chapter 3] Understanding Housing Wealth Effects: \\ Debt, Home-Ownership and the Lifecycle
+   \end{description}
+ \end{frame}
+ 
+ \section{Chapter 1 \\ Falling Behind: Has Rising Inequality \\ Fueled the American Debt Boom \\ \footnotesize{with Moritz Drechsel-Grau}}
+
+ \subsection{Introduction}
+ \input{../../falling-behind/slides/facts}
+ \input{../../falling-behind/slides/introduction}
+ \input{../../falling-behind/slides/mechanism}
+ \subsection{Model}
+ \input{../../falling-behind/slides/model}
+ \subsection{Quantitative Results}
+ \input{../../falling-behind/slides/inequality-experiment}
+ %\input{../../falling-behind/slides/horse-race}
+ \subsection{Conclusion}
+ \input{../../falling-behind/slides/outlook}
+
+ 
+ \section{Chapter 2 \\ Top Incomes And Mortgage Debt Across the United States \\ \footnotesize{with Moritz Drechsel-Grau}}
+
+ \begin{frame}{In A Nutshell}
+
+   \begin{block}{Questions}
+     \begin{enumerate}
+     \item Is there an empirical relationship between debt and and inequality?
+     \item Can we learn something about the underlying mechanism?
+     \end{enumerate}
+   \end{block}
+\pause
+   \begin{block}{Data}
+     \begin{itemize}
+     \item US distributional national accounts data \citep{piketty2018dina}
+     \item aggregate to state-year-income-group panel for income, mortgage debt, non-mortgage debt for 1980--2007
+     \end{itemize}     
+   \end{block}
+\pause
+   \begin{block}{Answers}
+     \begin{enumerate}
+     \item Yes.
+     \item Yes. \pause The \emph{comparisons channel} generates the findings. The \emph{Saving Glut of the Rich} \citep{mian2020savingglutrich,kumhof2015ineq} does not.
+     \end{enumerate}     
+   \end{block}
+
+ \end{frame}
+ 
+  \begin{frame}{Findings}
+     \begin{itemize}
+     \item There is a positive relationship between top incomes and mortgage debt of the non-rich across space (US states) and time (1980--2007)
+     \item The relationship is strong and persistent
+     \item There is no such relationship for non-mortgage debt
+     \end{itemize}
+
+ \end{frame}
+
+ \begin{frame}{Findings 1: Long differences 1980--2007}
+   \centering
+   \includegraphics[scale=0.17]{figures/long-diff}
+ \end{frame}
+
+ \begin{frame}{Findings 2: State-Year Variation - Partial out fixed effects}
+   \centering
+   \includegraphics[scale=0.17]{figures/state-year}
+ \end{frame}
+
+ \begin{frame}{Findings 3: Impulse Responses from Local Projections}
+   \centering
+   \includegraphics[scale=0.17]{figures/irf}
+ \end{frame}
+
+ \begin{frame}{Conclusion}
+
+   \begin{enumerate}
+   \item there is a strong and robust positive relationship between top incomes and mortage debt
+   \item \emph{Saving Glut of the Rich} is not enough to explain this
+     \begin{itemize}
+     \item variation across states
+     \item difference between mortgage and non-mortgage debt
+     \end{itemize}
+     \pause
+   \item Inequality is an important potential driver of mortgage debt
+   \item Social comparisons can generate our findings
+   \end{enumerate}
+ \end{frame}
+ 
+ \section{Chapter 3 \\ \large{Understanding Housing Wealth Effects: Debt, Home-Ownership and the Lifecycle \\ } \footnotesize{with Frederick Zadow}}
+
+
+ \subsection{Introduction}
+ \input{../../housing-wealth-effects/slides/introduction}
+ \subsection{A Tractable Model of Consumption, Housing and Mortgage Debt}
+ \input{../../housing-wealth-effects/slides/model}
+ \subsection{Empirics}
+ \input{../../housing-wealth-effects/slides/empirics}
+ \subsection{Summary}
+
+ \begin{frame}{Summary}
+   \begin{itemize}
+   \item We provide a tractable model with housing wealth effects
+   \item In our model
+     \begin{itemize}
+     \item housing preferences, age and homeownership drive housing wealth effects
+     \item the individual effect of credit is ambiguous
+     \end{itemize}
+   \end{itemize}
+ \end{frame}
+
+ \begin{frame}[allowframebreaks]{Literature}
+   \bibliographystyle{ecta} 
+   \bibliography{../../header-files/bib/shame}
+   % \addcontentsline{toc}{section}{References}
+ \end{frame}
+
+\end{document}
+
+%%% Local Variables:
+%%% TeX-engine: luatex
+%%% TeX-master: t
+%%% End:
